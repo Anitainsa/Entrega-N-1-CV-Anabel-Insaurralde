@@ -1,0 +1,189 @@
+/* Estilos del encabezado */
+header {
+    background: linear-gradient(to bottom, #FF69B4, #FF1493);
+    /* Gradiente de colores */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    /* Para que la barra de navegación quede fija en la parte superior */
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    /* Sombra */
+    transition: height 0.3s ease-out;
+    /* Transición suave de altura */
+}
+
+/* Clase CSS para el encabezado reducido */
+header.shrink {
+    height: 3.5rem;
+    /* Altura reducida */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Estilos de la sección de información personal */
+#informacion-personal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#informacion-personal li {
+    margin-bottom: 0.5rem;
+
+}
+
+#informacion-personal li strong {
+    margin-right: 0.5rem;
+}
+
+/* Estilos de la sección de experiencia laboral */
+#experiencia-laboral {
+    border: 1px solid #FF69B4;
+    /* Contenedor con borde */
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+#experiencia-laboral ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#experiencia-laboral li {
+    margin-bottom: 1rem;
+}
+
+#experiencia-laboral h3 {
+    margin-top: 0;
+}
+
+#experiencia-laboral p {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos de la sección de confitería */
+#Confiteria {
+    border: 1px solid #FF69B4;
+    /* Contenedor con borde */
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+#confiteria h2 {
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+.gallery {
+    border: 1px solid #ccc;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* Estilos del pie de página */
+footer {
+    background-color: #FF69B4;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilos de la foto */
+.foto {
+    border-radius: 10%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    /* sombra */
+    margin-top: 120px;
+    /* Agregar margen superior para evitar que la imagen se solape con la barra de navegación */
+}
+
+
+/* Media queries */
+@media screen and (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+
+    header.shrink {
+        height: 40px;
+    }
+
+    nav ul li {
+        margin-right: 0.5rem;
+    }
+
+    .responsive {
+        width: 33.33333%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    header {
+        height: 50px;
+    }
+
+    header.shrink {
+        height: 30px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: fixed;
+        top: 50px;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: #FF69B4;
+        transition: all 0.3s ease;
+    }
+
+    nav ul.show {
+        left: 0;
+    }
+
+    nav ul li {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
